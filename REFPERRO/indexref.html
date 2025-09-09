@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Un Amigo Te Espera - Padrinos</title>
+  <link rel="stylesheet" href="/css/tailwind.min.css">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/jpeg" href="/refugio.jpg">
+  <style>
+    .hero-bg {
+      background-image: url('/images/perro.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @media (max-width: 640px) {
+      .hero-bg {
+        background-image: url('/images/perro.jpg');
+      }
+    }
+  </style>
+</head>
+<body class="font-sans">
+  <header class="hero-bg h-screen flex items-center justify-center text-white">
+    <div class="bg-black bg-opacity-50 p-8 rounded-lg text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Un Amigo Te Espera</h1>
+      <p class="text-lg md:text-xl mb-6">Conviértete en padrino y cambia la vida de un animal rescatado.</p>
+      <a href="#contacto" class="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-600">¡Apadrina Ahora!</a>
+    </div>
+  </header>
+
+  <section class="py-16 px-4 md:px-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Qué significa ser padrino?</h2>
+      <p class="text-lg md:text-xl mb-8">Ser padrino en <strong>Un Amigo Te Espera</strong> es brindar amor y apoyo a los animales que han sido rescatados. Con tu ayuda, les proporcionamos alimento, cuidados médicos y un lugar seguro hasta que encuentren un hogar.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Apoyo Mensual</h3>
+          <p>Tu contribución mensual asegura que nuestros animales tengan lo necesario para vivir felices y sanos.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Visitas Especiales</h3>
+          <p>Como padrino, puedes visitar a tu ahijado y compartir momentos especiales con ellos.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">Impacto Real</h3>
+          <p>Cada apadrinamiento ayuda a rescatar y cuidar a más animales necesitados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 md:px-16">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Conoce a Nuestros Amigos</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="/images/perro.jpg" alt="Perro" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Luna</h3>
+            <p>Una perrita juguetona que espera tu apoyo para brillar.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="/images/perro.jpg" alt="Gato" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Milo</h3>
+            <p>Un gatito cariñoso que busca un padrino especial.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <img src="/images/perro.jpg" alt="Cachorro" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Max</h3>
+            <p>Un cachorro lleno de energía que necesita tu ayuda.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="py-16 px-4 md:px-16 bg-yellow-100">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">¡Únete como Padrino!</h2>
+      <p class="text-lg md:text-xl mb-8">Contáctanos para más información sobre cómo apadrinar a uno de nuestros amigos peludos.</p>
+      <form action="/enviar.php" method="POST" class="max-w-lg mx-auto">
+        <div class="mb-4">
+          <label for="nombre" class="block text-lg font-semibold mb-2">Nombre</label>
+          <input type="text" id="nombre" name="nombre" autocomplete="name" class="w-full p-2 border rounded" required>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-lg font-semibold mb-2">Correo Electrónico</label>
+          <input type="email" id="email" name="email" autocomplete="email" class="w-full p-2 border rounded" required>
+        </div>
+        <div class="mb-4">
+          <label for="mensaje" class="block text-lg font-semibold mb-2">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" class="w-full p-2 border rounded" rows="4"></textarea>
+        </div>
+        <button type="submit" class="bg-yellow-500 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-600">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-8 px-4 bg-gray-800 text-white text-center">
+    <p>&copy; 2025 Un Amigo Te Espera. Todos los derechos reservados.</p>
+    <p class="mt-2">Síguenos en <a href="#" class="underline">Instagram</a> | <a href="#" class="underline">Facebook</a></p>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then(registration => {
+            console.log('Service Worker registrado con éxito:', registration);
+          })
+          .catch(error => {
+            console.log('Error al registrar el Service Worker:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
